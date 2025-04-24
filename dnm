@@ -1,0 +1,97 @@
+🛠️ Git Configuration
+bash
+Copy
+Edit
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global core.editor "code --wait"  # Set VS Code as default editor
+git config --global --list                     # List all global configs
+📁 Repository Setup
+bash
+Copy
+Edit
+git init                        # Create a new Git repo
+git clone <repo_url>           # Clone a remote repo
+📄 Working with Files
+bash
+Copy
+Edit
+git status                     # Show file status
+git add <file>                 # Stage a file
+git add .                      # Stage all changes
+git add -A                     # Stage all (including deletions)
+git reset <file>               # Unstage a file
+git rm <file>                  # Remove a file and stage removal
+git mv <old> <new>             # Rename a file
+✅ Committing Changes
+bash
+Copy
+Edit
+git commit -m "message"        # Commit staged changes
+git commit -a -m "message"     # Stage and commit tracked files
+git commit --amend             # Edit the last commit
+📚 History
+bash
+Copy
+Edit
+git log                        # View commit history
+git log --oneline              # Short log
+git log --graph --oneline      # Visual branch history
+git show <commit>              # Show specific commit
+🔁 Branches
+bash
+Copy
+Edit
+git branch                     # List branches
+git branch <name>              # Create a new branch
+git branch -d <name>           # Delete a branch
+git checkout <branch>          # Switch to a branch
+git checkout -b <new>          # Create and switch to a new branch
+🔀 Merging and Rebasing
+bash
+Copy
+Edit
+git merge <branch>             # Merge a branch into the current one
+git rebase <branch>            # Rebase current branch onto another
+git rebase -i HEAD~n           # Interactive rebase last n commits
+🌐 Remote Repositories
+bash
+Copy
+Edit
+git remote -v                  # Show remotes
+git remote add origin <url>    # Add remote repo
+git push origin <branch>       # Push changes to remote
+git push -u origin <branch>    # Push and set upstream
+git pull origin <branch>       # Pull changes
+git fetch                      # Download updates without merging
+💣 Undo & Fix Mistakes
+bash
+Copy
+Edit
+git checkout -- <file>         # Discard changes to a file
+git restore <file>             # Restore file to last commit (modern Git)
+git reset HEAD <file>          # Unstage a file
+git reset --hard               # Reset all changes to last commit
+git revert <commit>            # Undo a commit with a new commit
+🧪 Stash Changes
+bash
+Copy
+Edit
+git stash                      # Save current changes
+git stash list                 # View stashed items
+git stash apply                # Re-apply stashed changes
+git stash drop                 # Delete a stash
+🧼 Clean Up
+bash
+Copy
+Edit
+git clean -f                   # Delete untracked files
+git clean -fd                  # Delete untracked files & folders
+🔍 Search and Inspect
+bash
+Copy
+Edit
+git grep "text"                # Search for text in repo
+git diff                       # Show unstaged changes
+git diff --staged              # Show staged changes
+git blame <file>               # Show who changed what and when
